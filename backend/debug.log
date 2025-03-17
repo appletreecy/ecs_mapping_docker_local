@@ -1,0 +1,260 @@
+INFO 2025-03-07 04:16:14,593 django.utils.autoreload 668 autoreload 25604 8430225472 Watching for file changes with StatReloader
+ERROR 2025-03-07 04:16:50,488 django.request 248 log 25604 6168244224 Internal Server Error: /api/mappings/ecs/
+Traceback (most recent call last):
+  File "/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/venv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/venv/lib/python3.13/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/venv/lib/python3.13/site-packages/rest_framework/views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+                    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/venv/lib/python3.13/site-packages/rest_framework/views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Expected a `Response`, `HttpResponse` or `StreamingHttpResponse` to be returned from the view, but received a `<class 'type'>`
+ERROR 2025-03-07 04:16:50,491 django.server 213 basehttp 25604 6168244224 "POST /api/mappings/ecs/ HTTP/1.1" 500 75254
+INFO 2025-03-07 04:19:38,702 django.utils.autoreload 266 autoreload 25604 8430225472 /Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/ecs_project/ecs_app/views.py changed, reloading.
+INFO 2025-03-07 04:19:39,462 django.utils.autoreload 668 autoreload 26650 8430225472 Watching for file changes with StatReloader
+INFO 2025-03-07 04:20:09,441 django.utils.autoreload 266 autoreload 26650 8430225472 /Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/ecs_project/ecs_app/views.py changed, reloading.
+INFO 2025-03-07 04:20:10,203 django.utils.autoreload 668 autoreload 26812 8430225472 Watching for file changes with StatReloader
+INFO 2025-03-07 04:20:20,247 django.utils.autoreload 266 autoreload 26812 8430225472 /Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/ecs_project/ecs_app/views.py changed, reloading.
+INFO 2025-03-07 04:20:20,865 django.utils.autoreload 668 autoreload 26874 8430225472 Watching for file changes with StatReloader
+INFO 2025-03-07 04:20:37,793 django.server 213 basehttp 26874 6201913344 "POST /api/mappings/ecs/ HTTP/1.1" 200 40
+INFO 2025-03-07 04:23:17,382 django.utils.autoreload 668 autoreload 27791 8430225472 Watching for file changes with StatReloader
+ERROR 2025-03-07 04:23:35,515 django.request 248 log 27791 6165983232 Internal Server Error: /api/mappings/ecs/
+Traceback (most recent call last):
+  File "/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/venv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/venv/lib/python3.13/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/venv/lib/python3.13/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/venv/lib/python3.13/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/venv/lib/python3.13/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/venv/lib/python3.13/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/venv/lib/python3.13/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/ecs_project/ecs_app/views.py", line 154, in get_ecs_mapping
+    stored_mapping = get_stored_mapping(log_field)
+                     ^^^^^^^^^^^^^^^^^^
+NameError: name 'get_stored_mapping' is not defined. Did you mean: 'get_ecs_mapping'?
+ERROR 2025-03-07 04:23:35,518 django.server 213 basehttp 27791 6165983232 "POST /api/mappings/ecs/ HTTP/1.1" 500 92224
+INFO 2025-03-07 04:25:01,474 django.utils.autoreload 266 autoreload 27791 8430225472 /Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/ecs_project/ecs_app/views.py changed, reloading.
+INFO 2025-03-07 04:25:02,207 django.utils.autoreload 668 autoreload 28340 8430225472 Watching for file changes with StatReloader
+INFO 2025-03-07 04:25:13,545 django.server 213 basehttp 28340 12901707776 "POST /api/mappings/ecs/ HTTP/1.1" 200 28
+INFO 2025-03-07 04:26:04,528 django.server 213 basehttp 28340 12901707776 "POST /api/mappings/ecs/ HTTP/1.1" 200 30
+ERROR 2025-03-07 04:27:23,302 django.request 248 log 28340 12901707776 Internal Server Error: /api/mappings/ecs/
+Traceback (most recent call last):
+  File "/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/venv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/venv/lib/python3.13/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/venv/lib/python3.13/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/venv/lib/python3.13/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/venv/lib/python3.13/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/venv/lib/python3.13/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/venv/lib/python3.13/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/ecs_project/ecs_app/views.py", line 165, in get_ecs_mapping
+    similar_fields = find_similar_fields_hybrid(log_field)
+  File "/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/ecs_project/ecs_app/views.py", line 73, in find_similar_fields_hybrid
+    tokenized_corpus = [word_tokenize(doc.lower()) for doc in corpus]
+                        ~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/venv/lib/python3.13/site-packages/nltk/tokenize/__init__.py", line 142, in word_tokenize
+    sentences = [text] if preserve_line else sent_tokenize(text, language)
+                                             ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/venv/lib/python3.13/site-packages/nltk/tokenize/__init__.py", line 119, in sent_tokenize
+    tokenizer = _get_punkt_tokenizer(language)
+  File "/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/venv/lib/python3.13/site-packages/nltk/tokenize/__init__.py", line 105, in _get_punkt_tokenizer
+    return PunktTokenizer(language)
+  File "/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/venv/lib/python3.13/site-packages/nltk/tokenize/punkt.py", line 1744, in __init__
+    self.load_lang(lang)
+    ~~~~~~~~~~~~~~^^^^^^
+  File "/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/venv/lib/python3.13/site-packages/nltk/tokenize/punkt.py", line 1749, in load_lang
+    lang_dir = find(f"tokenizers/punkt_tab/{lang}/")
+  File "/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/venv/lib/python3.13/site-packages/nltk/data.py", line 579, in find
+    raise LookupError(resource_not_found)
+LookupError: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - '/Users/steven/nltk_data'
+    - '/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/venv/nltk_data'
+    - '/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/venv/share/nltk_data'
+    - '/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/venv/lib/nltk_data'
+    - '/usr/share/nltk_data'
+    - '/usr/local/share/nltk_data'
+    - '/usr/lib/nltk_data'
+    - '/usr/local/lib/nltk_data'
+**********************************************************************
+
+ERROR 2025-03-07 04:27:23,306 django.server 213 basehttp 28340 12901707776 "POST /api/mappings/ecs/ HTTP/1.1" 500 140116
+ERROR 2025-03-07 04:30:20,488 django.request 248 log 28340 12901707776 Internal Server Error: /api/mappings/ecs/
+Traceback (most recent call last):
+  File "/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/venv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/venv/lib/python3.13/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/venv/lib/python3.13/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/venv/lib/python3.13/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/venv/lib/python3.13/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/venv/lib/python3.13/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/venv/lib/python3.13/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/ecs_project/ecs_app/views.py", line 165, in get_ecs_mapping
+    similar_fields = find_similar_fields_hybrid(log_field)
+  File "/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/ecs_project/ecs_app/views.py", line 73, in find_similar_fields_hybrid
+    tokenized_corpus = [word_tokenize(doc.lower()) for doc in corpus]
+                        ~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/venv/lib/python3.13/site-packages/nltk/tokenize/__init__.py", line 142, in word_tokenize
+    sentences = [text] if preserve_line else sent_tokenize(text, language)
+                                             ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/venv/lib/python3.13/site-packages/nltk/tokenize/__init__.py", line 119, in sent_tokenize
+    tokenizer = _get_punkt_tokenizer(language)
+  File "/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/venv/lib/python3.13/site-packages/nltk/tokenize/__init__.py", line 105, in _get_punkt_tokenizer
+    return PunktTokenizer(language)
+  File "/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/venv/lib/python3.13/site-packages/nltk/tokenize/punkt.py", line 1744, in __init__
+    self.load_lang(lang)
+    ~~~~~~~~~~~~~~^^^^^^
+  File "/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/venv/lib/python3.13/site-packages/nltk/tokenize/punkt.py", line 1749, in load_lang
+    lang_dir = find(f"tokenizers/punkt_tab/{lang}/")
+  File "/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/venv/lib/python3.13/site-packages/nltk/data.py", line 579, in find
+    raise LookupError(resource_not_found)
+LookupError: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - '/Users/steven/nltk_data'
+    - '/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/venv/nltk_data'
+    - '/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/venv/share/nltk_data'
+    - '/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/venv/lib/nltk_data'
+    - '/usr/share/nltk_data'
+    - '/usr/local/share/nltk_data'
+    - '/usr/lib/nltk_data'
+    - '/usr/local/lib/nltk_data'
+**********************************************************************
+
+ERROR 2025-03-07 04:30:20,491 django.server 213 basehttp 28340 12901707776 "POST /api/mappings/ecs/ HTTP/1.1" 500 140330
+INFO 2025-03-07 04:30:33,469 django.utils.autoreload 668 autoreload 30091 8430225472 Watching for file changes with StatReloader
+ERROR 2025-03-07 04:30:43,436 django.request 248 log 30091 6168506368 Internal Server Error: /api/mappings/ecs/
+Traceback (most recent call last):
+  File "/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/venv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/venv/lib/python3.13/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/venv/lib/python3.13/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/venv/lib/python3.13/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/venv/lib/python3.13/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/venv/lib/python3.13/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/venv/lib/python3.13/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/ecs_project/ecs_app/views.py", line 165, in get_ecs_mapping
+    similar_fields = find_similar_fields_hybrid(log_field)
+  File "/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/ecs_project/ecs_app/views.py", line 73, in find_similar_fields_hybrid
+    tokenized_corpus = [word_tokenize(doc.lower()) for doc in corpus]
+                        ~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/venv/lib/python3.13/site-packages/nltk/tokenize/__init__.py", line 142, in word_tokenize
+    sentences = [text] if preserve_line else sent_tokenize(text, language)
+                                             ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/venv/lib/python3.13/site-packages/nltk/tokenize/__init__.py", line 119, in sent_tokenize
+    tokenizer = _get_punkt_tokenizer(language)
+  File "/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/venv/lib/python3.13/site-packages/nltk/tokenize/__init__.py", line 105, in _get_punkt_tokenizer
+    return PunktTokenizer(language)
+  File "/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/venv/lib/python3.13/site-packages/nltk/tokenize/punkt.py", line 1744, in __init__
+    self.load_lang(lang)
+    ~~~~~~~~~~~~~~^^^^^^
+  File "/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/venv/lib/python3.13/site-packages/nltk/tokenize/punkt.py", line 1749, in load_lang
+    lang_dir = find(f"tokenizers/punkt_tab/{lang}/")
+  File "/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/venv/lib/python3.13/site-packages/nltk/data.py", line 579, in find
+    raise LookupError(resource_not_found)
+LookupError: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - '/Users/steven/nltk_data'
+    - '/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/venv/nltk_data'
+    - '/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/venv/share/nltk_data'
+    - '/Users/steven/Desktop/tmp/python_pg/ecs_mapping_webapp/venv/lib/nltk_data'
+    - '/usr/share/nltk_data'
+    - '/usr/local/share/nltk_data'
+    - '/usr/lib/nltk_data'
+    - '/usr/local/lib/nltk_data'
+**********************************************************************
+
+ERROR 2025-03-07 04:30:43,440 django.server 213 basehttp 30091 6168506368 "POST /api/mappings/ecs/ HTTP/1.1" 500 140330
+INFO 2025-03-07 04:31:54,505 django.utils.autoreload 668 autoreload 30555 8430225472 Watching for file changes with StatReloader
+INFO 2025-03-07 04:32:12,066 django.server 213 basehttp 30555 6389608448 "POST /api/mappings/ecs/ HTTP/1.1" 200 55
+INFO 2025-03-10 05:34:03,716 django.utils.autoreload 668 autoreload 35 281473103290400 Watching for file changes with StatReloader
+INFO 2025-03-10 05:37:17,366 django.utils.autoreload 668 autoreload 35 281473185861664 Watching for file changes with StatReloader
+INFO 2025-03-10 05:41:19,879 django.server 213 basehttp 35 281471003849120 "POST /api/mappings/ecs/ HTTP/1.0" 200 96

@@ -1,0 +1,4 @@
+fine_tuned_model/
+.env
+.DS_Store
+mysql-data/

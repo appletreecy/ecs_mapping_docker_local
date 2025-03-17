@@ -1,0 +1,83 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0
+    restart: always
+    env_file: .env
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_ALLOW_PUBLIC_KEY_RETRIEVAL: "true"
+    ports:
+      - "3307:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+    command: --default-authentication-plugin=mysql_native_password
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:alpine
+    restart: always
+    ports:
+      - "6379:6379"
+
+  backend:
+    build: ./backend
+    restart: always
+    env_file: .env
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - CELERY_BROKER_URL=redis://redis:6379/0
+      - DJANGO_SETTINGS_MODULE=ecs_project.settings
+    depends_on:
+      - mysql
+      - redis
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app  # ✅ Ensures model is saved persistently
+
+  frontend:
+    build: ./frontend
+    restart: always
+    depends_on:
+      - backend
+    ports:
+      - "80:80"
+
+  celery_worker:
+    build: ./backend  # ✅ Uses the same backend container
+    restart: always
+    command: celery -A ecs_project worker --loglevel=info -P solo
+    env_file: .env
+    environment:
+      - CELERY_BROKER_URL=redis://redis:6379/0
+      - DJANGO_SETTINGS_MODULE=ecs_project.settings
+    depends_on:
+      - redis
+      - backend
+    volumes:
+      - ./backend:/app  # ✅ Ensures fine-tuned model persists
+
+  celery_beat:
+    build: ./backend
+    restart: always
+    command: celery -A ecs_project beat --loglevel=info
+    env_file: .env
+    environment:
+      - CELERY_BROKER_URL=redis://redis:6379/0
+      - DJANGO_SETTINGS_MODULE=ecs_project.settings
+    depends_on:
+      - redis
+      - backend
+      - celery_worker
+
+volumes:
+  mysql-data:

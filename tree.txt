@@ -1,0 +1,75 @@
+.
+├── backend
+│   ├── Dockerfile
+│   ├── README.md
+│   ├── ecs_app
+│   │   ├── __init__.py
+│   │   ├── __pycache__
+│   │   │   ├── __init__.cpython-313.pyc
+│   │   │   ├── admin.cpython-313.pyc
+│   │   │   ├── apps.cpython-313.pyc
+│   │   │   ├── config.cpython-313.pyc
+│   │   │   ├── models.cpython-313.pyc
+│   │   │   ├── urls.cpython-313.pyc
+│   │   │   └── views.cpython-313.pyc
+│   │   ├── admin.py
+│   │   ├── apps.py
+│   │   ├── config.py
+│   │   ├── migrations
+│   │   │   ├── 0001_initial.py
+│   │   │   ├── __init__.py
+│   │   │   └── __pycache__
+│   │   │       ├── 0001_initial.cpython-313.pyc
+│   │   │       └── __init__.cpython-313.pyc
+│   │   ├── models.py
+│   │   ├── tests.py
+│   │   ├── urls.py
+│   │   └── views.py
+│   ├── ecs_project
+│   │   ├── __init__.py
+│   │   ├── __pycache__
+│   │   │   ├── __init__.cpython-313.pyc
+│   │   │   ├── settings.cpython-313.pyc
+│   │   │   ├── urls.cpython-313.pyc
+│   │   │   └── wsgi.cpython-313.pyc
+│   │   ├── asgi.py
+│   │   ├── settings.py
+│   │   ├── urls.py
+│   │   └── wsgi.py
+│   ├── manage.py
+│   └── requirements.txt
+├── docker-compose.yml
+├── frontend
+│   ├── Dockerfile
+│   ├── README.md
+│   ├── components.json
+│   ├── eslint.config.js
+│   ├── index.html
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── public
+│   │   └── vite.svg
+│   ├── src
+│   │   ├── App.css
+│   │   ├── App.jsx
+│   │   ├── api.js
+│   │   ├── assets
+│   │   │   ├── logo.png
+│   │   │   └── react.svg
+│   │   ├── components
+│   │   │   └── ui
+│   │   │       ├── alert.tsx
+│   │   │       ├── button.tsx
+│   │   │       ├── card.tsx
+│   │   │       └── textarea.tsx
+│   │   ├── index.css
+│   │   ├── index.css.bak
+│   │   ├── lib
+│   │   │   └── utils.ts
+│   │   ├── main.jsx
+│   │   └── pages
+│   │       └── EcsMapping.jsx
+│   ├── tailwind.config.js
+│   ├── tsconfig.json
+│   └── vite.config.js
+└── mysql-data
